@@ -2,6 +2,7 @@ package com.example.starcraft.race;
 
 import com.example.starcraft.unit.Unit;
 import com.example.starcraft.unit.GroundUnit;
+import com.example.starcraft.unit.ResourceUnit;
 import com.example.starcraft.Building;
 import com.example.starcraft.unit.AirUnit;
 import com.example.starcraft.unit.AttackType;
@@ -20,6 +21,12 @@ public class Zerg extends Race{
     public Unit createAirUnit(String unitType) {
         return new AirUnit(unitType, 130, 14, 2, 1.3, new AttackType(false, true, false),100,100);
     }
+
+    @Override
+    public ResourceUnit createResourceUnit() {
+        return new ResourceUnit("Drone", 60, 5, 0, 1.0, new AttackType(true, false, false), 50, 20, 8);
+    }
+    
 
     @Override
     public Building createBuilding(String buildingType) {

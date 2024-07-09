@@ -1,6 +1,7 @@
 package com.example.starcraft.race;
 
 import com.example.starcraft.Building;
+import com.example.starcraft.unit.ResourceUnit;
 import com.example.starcraft.unit.Unit;
 
 /*
@@ -17,6 +18,8 @@ public abstract class Race {
     public abstract Unit createGroundUnit(String unitType);
     
     public abstract Unit createAirUnit(String unitType);
+
+    public abstract ResourceUnit createResourceUnit();
 
     public abstract Building createBuilding(String buildType);
     
