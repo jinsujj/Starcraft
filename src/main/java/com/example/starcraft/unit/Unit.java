@@ -1,4 +1,6 @@
-package com.example.starcraft;
+package com.example.starcraft.unit;
+
+import com.example.starcraft.AttackType;
 
 /*
  *  책임: 유닛의 기본 속성 및 행동 정의
@@ -9,12 +11,16 @@ public abstract class Unit {
     protected String unitType;
     protected int health;
     protected int attackDamage;
+    protected int armor;
+    protected double attackSpeed;
     protected AttackType AttackType;
 
-    public Unit(String unitType, int health, int attackDamage, AttackType attackType){
+    public Unit(String unitType, int health, int attackDamage,int armor, double attackSpeed, AttackType attackType){
         this.unitType = unitType;
         this.health = health;
         this.attackDamage = attackDamage;
+        this.armor = armor;
+        this.attackSpeed = attackSpeed;
         this.AttackType = attackType;
     }
 
