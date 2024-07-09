@@ -2,6 +2,7 @@ package com.example.starcraft.race;
 
 import com.example.starcraft.unit.Unit;
 import com.example.starcraft.unit.GroundUnit;
+import com.example.starcraft.unit.ResourceUnit;
 import com.example.starcraft.Building;
 import com.example.starcraft.unit.AirUnit;
 import com.example.starcraft.unit.AttackType;
@@ -33,10 +34,16 @@ public class Terran extends Race {
             default: throw new IllegalArgumentException("Unknown unit type: " + unitType);
         }
     }
+    
+    @Override
+    public ResourceUnit createResourceUnit() {
+        return new ResourceUnit("Scv", 60, 5, 0, 1.0, new AttackType(true, false, false), 50, 20, 8);
+    }
 
     @Override
     public Building createBuilding(String buildingType) {
         return new Building(buildingType);
     }
+
     
 }
