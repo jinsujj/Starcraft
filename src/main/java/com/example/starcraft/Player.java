@@ -53,4 +53,24 @@ public class Player {
         return units.isEmpty() && buildings.isEmpty();
     }
 
+    public boolean spendResources(int amount) {
+        if (resources >= amount) {
+            resources -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public void addBuilding(Building building) {
+        buildings.add(building);
+    }
+
+    public int getResources() {
+        return resources;
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
 }

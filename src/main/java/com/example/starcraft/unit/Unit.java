@@ -25,7 +25,6 @@ public abstract class Unit {
         this.AttackType = attackType;
         this.mineralCost = mineralCost;
         this.buildTime = buildTime;
-
     }
 
     public abstract void attack(Unit target);

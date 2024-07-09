@@ -38,8 +38,10 @@ public class Game {
     
     public static void main(String[] atgs){
         Race terranRace = new Terran();
+        Race protossRace = new Protoss();
+        Race zergRace = new Zerg();
         Player player1 = new Player("Player1", terranRace);
-        Player player2 = new Player("Player2", terranRace);
+        Player player2 = new Player("Player2", zergRace);
         Game game = new Game(List.of(player1, player2));
         game.start();
     }
