@@ -14,7 +14,6 @@ public class Race {
     public Unit createGroundUnit(String unitType){
         return new GroundUnit(unitType);
     }
-
     public Unit createAirUnit(String unitType){
         return new AirUnit(unitType);
     }

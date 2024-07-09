@@ -7,13 +7,17 @@ package com.example.starcraft;
 
 public class AirUnit extends Unit{
     public AirUnit(String unitType){
-        super(unitType, 80);
+        super(unitType, 80, 15, new AttackType(false, true, false));
     }
 
     @Override
     public void attack(Unit target) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'attack'");
+        if(canAttack(target)){
+            System.out.println(unitType +" is attacking "+ target.unitType + " with ranged attack");
+            target.health -= attackDamage;
+        }else{
+            System.out.println(unitType+" cannot attack "+ target.unitType);
+        }
     }
 
 }
