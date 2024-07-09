@@ -19,10 +19,11 @@ public class Building {
     }
 
     public Unit produceUnit(String unitType, boolean isAirUnit) {
+        // 생산 비용과 시간을 고려한 유닛 생성 로직
         if (isAirUnit) {
-            return new AirUnit(unitType, 130, 14, 2, 1.3, new AttackType(false, true, false));
+            return new AirUnit(unitType, 130, 14, 2, 1.3, new AttackType(false, true, false), 150, 60);
         } else {
-            return new GroundUnit(unitType, 90, 8, 4, 0.8, new AttackType(true, false, false));
+            return new GroundUnit(unitType, 90, 8, 4, 0.8, new AttackType(true, false, false), 50, 25);
         }
     }
 }

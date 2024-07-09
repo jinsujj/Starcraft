@@ -13,14 +13,19 @@ public abstract class Unit {
     protected int armor;
     protected double attackSpeed;
     protected AttackType AttackType;
+    protected int mineralCost;
+    protected int buildTime;
 
-    public Unit(String unitType, int health, int attackDamage,int armor, double attackSpeed, AttackType attackType){
+    public Unit(String unitType, int health, int attackDamage,int armor, double attackSpeed, AttackType attackType, int mineralCost, int buildTime){
         this.unitType = unitType;
         this.health = health;
         this.attackDamage = attackDamage;
         this.armor = armor;
         this.attackSpeed = attackSpeed;
         this.AttackType = attackType;
+        this.mineralCost = mineralCost;
+        this.buildTime = buildTime;
+
     }
 
     public abstract void attack(Unit target);

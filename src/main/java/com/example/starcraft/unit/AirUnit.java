@@ -6,8 +6,8 @@ package com.example.starcraft.unit;
  */
 
 public class AirUnit extends Unit{
-    public AirUnit(String unitType, int health, int attackDamage, int armor, double attackSpeed, AttackType attackType) {
-        super(unitType, health, attackDamage, armor, attackSpeed, attackType);
+    public AirUnit(String unitType, int health, int attackDamage, int armor, double attackSpeed, AttackType attackType, int mineralCost, int buildTime) {
+        super(unitType, health, attackDamage, armor, attackSpeed, attackType, mineralCost, buildTime);
     }
 
     @Override
