@@ -1,5 +1,10 @@
 package com.example.starcraft;
 
+import com.example.starcraft.unit.AirUnit;
+import com.example.starcraft.unit.GroundUnit;
+import com.example.starcraft.unit.Unit;
+import com.example.starcraft.unit.AttackType;
+
 /*
  * 책임: 건물의 특성 및 행동 정의 
  * 메시지: produceUnit()

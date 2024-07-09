@@ -1,4 +1,4 @@
-package com.example.starcraft;
+package com.example.starcraft.race;
 
 public class Terrain {
     private String type;

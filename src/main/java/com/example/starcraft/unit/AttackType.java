@@ -1,8 +1,5 @@
-package com.example.starcraft;
+package com.example.starcraft.unit;
 
-import com.example.starcraft.unit.AirUnit;
-import com.example.starcraft.unit.GroundUnit;
-import com.example.starcraft.unit.Unit;
 
 /*
  *  책임: 공격 가능 타입을 정의
