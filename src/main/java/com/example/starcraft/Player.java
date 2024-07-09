@@ -3,6 +3,7 @@ package com.example.starcraft;
 import java.util.List;
 
 import com.example.starcraft.race.Race;
+import com.example.starcraft.unit.ResourceUnit;
 import com.example.starcraft.unit.Unit;
 
 import java.util.ArrayList;
@@ -33,7 +34,11 @@ public class Player {
     }
 
     private void collectResources(){
-        // 자원 수집 로직
+        for(Unit unit: units){
+            if (unit instanceof ResourceUnit){
+                resources += ((ResourceUnit)unit).collectResources();
+            }
+        }
     }
 
     private void buildUnits(){
