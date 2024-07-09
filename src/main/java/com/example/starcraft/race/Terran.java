@@ -4,9 +4,14 @@ import com.example.starcraft.unit.Unit;
 import com.example.starcraft.unit.GroundUnit;
 import com.example.starcraft.unit.ResourceUnit;
 import com.example.starcraft.Building;
+import com.example.starcraft.Player;
 import com.example.starcraft.unit.AirUnit;
 import com.example.starcraft.unit.AttackType;
 
+/*
+ *  책임: 프로토스 종족의 특성 및 유닛/건물 관리.
+ *  메시지: createGroundUnit(), createAirUnit(), createBuilding()
+ */
 
 public class Terran extends Race {
     public Terran(){
@@ -26,7 +31,7 @@ public class Terran extends Race {
     }
 
     @Override
-    public Unit createAirUnit(String unitType) {
+    public Unit createAirUnit(String unitType){
         switch(unitType) {
             case "Wraith": return new AirUnit("Wraith", 120, 20, 0, 2.0, new AttackType(false, true, false), 150, 60);
             case "Valkyrie": return new AirUnit("Valkyrie", 200, 25, 2, 3.0, new AttackType(false, true, false), 250, 90);
@@ -36,13 +41,18 @@ public class Terran extends Race {
     }
     
     @Override
-    public ResourceUnit createResourceUnit() {
-        return new ResourceUnit("Scv", 60, 5, 0, 1.0, new AttackType(true, false, false), 50, 20, 8);
+    public ResourceUnit createResourceUnit(Player player) {
+        return new ResourceUnit("Scv", 60, 5, 0, 1.0, new AttackType(true, false, false), 50, 20, 8,player);
     }
 
     @Override
     public Building createBuilding(String buildingType) {
-        return new Building(buildingType);
+        switch(buildingType) {
+            case "CommandCenter": return new Building("CommandCenter", 500, 400, 150);
+            case "Barracks": return new Building("Barracks", 350, 150, 65);
+            case "SupplyDepot": return new Building("SupplyDepot", 200, 100, 30);
+            default: throw new IllegalArgumentException("Unknown building type: " + buildingType);
+        }
     }
 
     

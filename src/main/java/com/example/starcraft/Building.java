@@ -12,10 +12,18 @@ import com.example.starcraft.unit.AttackType;
 public class Building {
     private String buildingType;
     private int health;
+    private int mineralCost;
+    private int buildTime;
 
-    public Building(String buildType){
-        this.buildingType = buildType;
-        this.health = 500;
+    public Building(String buildingType, int health, int mineralCost, int buildTime) {
+        this.buildingType = buildingType;
+        this.health = health;
+        this.mineralCost = mineralCost;
+        this.buildTime = buildTime;
+    }
+
+    public int getMineralCost() {
+        return mineralCost;
     }
 
     public Unit produceUnit(String unitType, boolean isAirUnit) {
