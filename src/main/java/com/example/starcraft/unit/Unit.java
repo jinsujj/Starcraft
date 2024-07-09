@@ -1,4 +1,6 @@
-package com.example.starcraft;
+package com.example.starcraft.unit;
+
+import com.example.starcraft.AttackType;
 
 /*
  *  책임: 유닛의 기본 속성 및 행동 정의
