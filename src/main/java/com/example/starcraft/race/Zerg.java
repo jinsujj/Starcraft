@@ -1,4 +1,10 @@
-package com.example.starcraft;
+package com.example.starcraft.race;
+
+import com.example.starcraft.unit.Unit;
+import com.example.starcraft.unit.GroundUnit;
+import com.example.starcraft.Building;
+import com.example.starcraft.unit.AirUnit;
+import com.example.starcraft.unit.AttackType;
 
 public class Zerg extends Race{
     public Zerg(){

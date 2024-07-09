@@ -1,4 +1,7 @@
-package com.example.starcraft;
+package com.example.starcraft.race;
+
+import com.example.starcraft.Building;
+import com.example.starcraft.unit.Unit;
 
 /*
  *  책임: 종족의 특성 및 유닛/건물 관리.

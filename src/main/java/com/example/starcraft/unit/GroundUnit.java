@@ -1,4 +1,4 @@
-package com.example.starcraft;
+package com.example.starcraft.unit;
 
 /*
  * 책임: 지상 유닛의 특성 및 행동 정의
