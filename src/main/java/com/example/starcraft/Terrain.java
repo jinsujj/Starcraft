@@ -1,5 +1,9 @@
 package com.example.starcraft.race;
 
+/*
+ * 책임: 지형 정보를 관리
+ * 메시지: isAccessibleByGround(), isAccessibleByAir()
+ */
 public class Terrain {
     private String type;
 
