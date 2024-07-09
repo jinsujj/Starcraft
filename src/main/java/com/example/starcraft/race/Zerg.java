@@ -13,12 +13,12 @@ public class Zerg extends Race{
 
     @Override
     public Unit createGroundUnit(String unitType) {
-        return new GroundUnit(unitType, 90, 8, 4, 0.8, new AttackType(true, false, false));
+        return new GroundUnit(unitType, 90, 8, 4, 0.8, new AttackType(true, false, false),100,100);
     }
 
     @Override
     public Unit createAirUnit(String unitType) {
-        return new AirUnit(unitType, 130, 14, 2, 1.3, new AttackType(false, true, false));
+        return new AirUnit(unitType, 130, 14, 2, 1.3, new AttackType(false, true, false),100,100);
     }
 
     @Override
