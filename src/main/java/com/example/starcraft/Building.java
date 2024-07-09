@@ -13,10 +13,11 @@ public class Building {
         this.health = 500;
     }
 
-    public Unit produceUnit(String unitType, boolean isAirUnit){
-        if(isAirUnit){
-            return new AirUnit(unitType);
+    public Unit produceUnit(String unitType, boolean isAirUnit) {
+        if (isAirUnit) {
+            return new AirUnit(unitType, 130, 14, 2, 1.3, new AttackType(false, true, false));
+        } else {
+            return new GroundUnit(unitType, 90, 8, 4, 0.8, new AttackType(true, false, false));
         }
-        return new GroundUnit(unitType);
     }
 }
