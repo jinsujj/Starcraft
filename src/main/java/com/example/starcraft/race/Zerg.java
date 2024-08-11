@@ -9,7 +9,7 @@ import com.example.starcraft.unit.AirUnit;
 import com.example.starcraft.unit.AttackType;
 
 /*
- *  책임: 테란 종족의 특성 및 유닛/건물 관리.
+ *  책임: 저그 종족의 특성 및 유닛/건물 관리.
  *  메시지: createGroundUnit(), createAirUnit(), createBuilding()
  */
 

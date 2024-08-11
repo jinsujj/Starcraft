@@ -9,7 +9,7 @@ import com.example.starcraft.unit.AirUnit;
 import com.example.starcraft.unit.AttackType;
 
 /*
- *  책임: 프로토스 종족의 특성 및 유닛/건물 관리.
+ *  책임: 테란 종족의 특성 및 유닛/건물 관리.
  *  메시지: createGroundUnit(), createAirUnit(), createBuilding()
  */
 
@@ -29,16 +29,6 @@ public class Terran extends Race {
             default: throw new IllegalArgumentException("Unknown unit type: " + unitType);
         }
     }
-
-    @Override
-    public Unit createAirUnit(String unitType){
-        switch(unitType) {
-            case "Wraith": return new AirUnit("Wraith", 120, 20, 0, 2.0, new AttackType(false, true, false), 150, 60);
-            case "Valkyrie": return new AirUnit("Valkyrie", 200, 25, 2, 3.0, new AttackType(false, true, false), 250, 90);
-            case "Battlecruiser": return new AirUnit("Battlecruiser", 500, 40, 3, 5.0, new AttackType(true, true, true), 400, 120);
-            default: throw new IllegalArgumentException("Unknown unit type: " + unitType);
-        }
-    }
     
     @Override
     public ResourceUnit createResourceUnit(Player player) {
@@ -53,6 +43,12 @@ public class Terran extends Race {
             case "SupplyDepot": return new Building("SupplyDepot", 200, 100, 30);
             default: throw new IllegalArgumentException("Unknown building type: " + buildingType);
         }
+    }
+
+    @Override
+    public Unit createAirUnit(String unitType) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createAirUnit'");
     }
 
     

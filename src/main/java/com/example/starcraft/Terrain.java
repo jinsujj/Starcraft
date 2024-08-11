@@ -1,4 +1,4 @@
-package com.example.starcraft.race;
+package com.example.starcraft;
 
 /*
  * 책임: 지형 정보를 관리
